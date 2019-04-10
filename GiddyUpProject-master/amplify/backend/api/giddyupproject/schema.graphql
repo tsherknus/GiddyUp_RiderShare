@@ -1,0 +1,21 @@
+type User @model {
+  id: ID!
+  username: String!
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  address: String
+  image: String
+}
+
+
+type Driver @model{
+  id: ID!
+  username: String!
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  address: String
+  image: String
+
+}

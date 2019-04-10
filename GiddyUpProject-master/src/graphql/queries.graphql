@@ -1,0 +1,59 @@
+# this is an auto generated file. This will be overwritten
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      firstName
+      lastName
+      phoneNumber
+      address
+      image
+    }
+    nextToken
+  }
+}
+query GetDriver($id: ID!) {
+  getDriver(id: $id) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
+query ListDrivers(
+  $filter: ModelDriverFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listDrivers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      username
+      firstName
+      lastName
+      phoneNumber
+      address
+      image
+    }
+    nextToken
+  }
+}

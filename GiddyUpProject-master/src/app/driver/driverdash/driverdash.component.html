@@ -1,0 +1,41 @@
+<mat-toolbar color="accent">
+  <span>Driver Dashboard </span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="remaining-space"></span>
+
+  <mat-icon>person </mat-icon>
+  <span>Hi {{userName}}!</span>
+</mat-toolbar>
+
+<mat-tab-group>
+  <mat-tab label="Driver Profile">
+    <ng-template mat-tab-label="">
+      <mat-icon class="tab-icon">person</mat-icon>
+      Driver Profile
+    </ng-template>
+    <app-driverprofile></app-driverprofile>
+  </mat-tab>
+  <mat-tab label="Earning History">
+    <ng-template mat-tab-label="">
+      <mat-icon class="tab-icon">attach_money </mat-icon>
+      Earning History
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Payment History">
+    <ng-template mat-tab-label="">
+      <mat-icon class="tab-icon">account_balance</mat-icon>
+      Weekly Earning
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Car Details">
+    <ng-template mat-tab-label="">
+      <mat-icon class="tab-icon"> directions_car</mat-icon>
+      Car Information
+
+    </ng-template>
+
+
+
+  </mat-tab>
+</mat-tab-group>

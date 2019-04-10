@@ -1,0 +1,67 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
+mutation UpdateUser($input: UpdateUserInput!) {
+  updateUser(input: $input) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
+mutation DeleteUser($input: DeleteUserInput!) {
+  deleteUser(input: $input) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
+mutation CreateDriver($input: CreateDriverInput!) {
+  createDriver(input: $input) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
+mutation UpdateDriver($input: UpdateDriverInput!) {
+  updateDriver(input: $input) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
+mutation DeleteDriver($input: DeleteDriverInput!) {
+  deleteDriver(input: $input) {
+    id
+    username
+    firstName
+    lastName
+    phoneNumber
+    address
+    image
+  }
+}
