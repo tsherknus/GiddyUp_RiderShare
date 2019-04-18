@@ -50,7 +50,7 @@ export class MapsComponent implements OnInit {
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ["address"]
+        types: []
       });
       autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {
@@ -69,7 +69,7 @@ export class MapsComponent implements OnInit {
         });
       });
       let autocomplete1 = new google.maps.places.Autocomplete(this.search1ElementRef.nativeElement, {
-        types: ["address"]
+        types: []
       });
       autocomplete1.addListener("place_changed", () => {
         this.ngZone.run(() => {
