@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.0.0-beta.5",
     "@angular/animations": "github:angular/animations-builds",
     "@angular/cdk": "github:angular/cdk-builds",
     "@angular/common": "~7.2.0",
@@ -24,6 +25,8 @@
     "@angular/router": "~7.2.0",
     "@fortawesome/fontawesome-free": "^5.7.2",
     "@types/chart.js": "^2.7.45",
+    "@types/googlemaps": "^3.30.19",
+    "agm-direction": "^0.7.6",
     "angular-bootstrap-md": "^7.4.1",
     "angular-ts-math": "^1.0.7",
     "aws-amplify": "^1.1.19",
@@ -38,13 +41,13 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "~7.3.2",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",

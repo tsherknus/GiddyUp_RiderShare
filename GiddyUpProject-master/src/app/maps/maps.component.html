@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Angular 2 + Google Maps Places Autocomplete</h1>
+  <div class="form-group">
+    <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+    <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search1 [formControl]="searchControl">
+  </div>
+  <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+    <agm-marker *ngIf="markersOff" [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    <agm-direction [origin]="origin" [destination]="destination">
+    </agm-direction>
+  </agm-map>
+</div>

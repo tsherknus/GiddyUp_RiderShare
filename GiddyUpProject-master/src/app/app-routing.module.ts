@@ -5,10 +5,11 @@ import {UserdashComponent} from './userdash/userdash.component';
 import {HomepageComponent} from './welcome/homepage/homepage.component';
 import {DriverauthComponent} from './auth/driverauth/driverauth.component';
 import {DriverdashComponent} from './driver/driverdash/driverdash.component';
+import {MapsComponent} from "./maps/maps.component";
 
 const routes: Routes = [{
   path: 'profile',
-  component: UserdashComponent
+  component: MapsComponent
 },
   {
     path: 'login',
@@ -22,6 +23,10 @@ const routes: Routes = [{
   },
   { path: 'driverdash',
     component: DriverdashComponent
+  },
+  {
+    path: 'map',
+    component: MapsComponent
   },
   {
     path: '**',

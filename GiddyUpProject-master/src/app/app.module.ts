@@ -7,7 +7,7 @@ import { AuthComponent } from './auth/auth.component';
 import { UserdashComponent } from './userdash/userdash.component';
 import {AmplifyAngularModule, AmplifyService} from 'aws-amplify-angular';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import { HeaderComponent } from './navigation/header/header.component';
@@ -18,6 +18,13 @@ import { ProfileinfoComponent } from './userprofile/profileinfo/profileinfo.comp
 import { DriverauthComponent } from './auth/driverauth/driverauth.component';
 import { DriverdashComponent } from './driver/driverdash/driverdash.component';
 import { DriverprofileComponent } from './driver/driverprofile/driverprofile.component';
+import {MapsComponent} from "./maps/maps.component";
+import {MapsService} from "./maps/maps.service";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {CommonModule} from "@angular/common";
+import {HttpClientModule} from "@angular/common/http";
+import {AgmCoreModule, GoogleMapsAPIWrapper} from "@agm/core";
+import {AgmDirectionModule} from "agm-direction";
 
 
 @NgModule({
@@ -32,6 +39,7 @@ import { DriverprofileComponent } from './driver/driverprofile/driverprofile.com
     DriverauthComponent,
     DriverdashComponent,
     DriverprofileComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +48,22 @@ import { DriverprofileComponent } from './driver/driverprofile/driverprofile.com
     MDBBootstrapModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MaterialModule,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDFTKbcSXEN22pUx3zfaabEOGyy7oOZtmI',
+      libraries: ["places", "geometry"]
+    }),
+    AgmDirectionModule,
+    HttpClientModule
   ],
-  providers: [AmplifyService],
+  providers: [GoogleMapsAPIWrapper,
+              AmplifyService,
+              MapsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
